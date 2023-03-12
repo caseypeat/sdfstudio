@@ -24,7 +24,7 @@ CUDA must be installed on the system. This library has been tested with version 
 SDFStudio requires `python >= 3.7`. We recommend using conda to manage dependencies. Make sure to install [Conda](https://docs.conda.io/en/latest/miniconda.html) before proceeding.
 
 ```bash
-conda create --name sdfstudio -y python=3.8
+conda create --name sdfstudio -y python=3.9
 conda activate sdfstudio
 python -m pip install --upgrade pip
 ```
@@ -34,7 +34,7 @@ python -m pip install --upgrade pip
 Install pytorch with CUDA (this repo has been tested with CUDA 11.3) and [tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn)
 
 ```bash
-pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 -f https://download.pytorch.org/whl/torch_stable.html
+pip install torch torchvision torchaudio
 pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
 ```
 

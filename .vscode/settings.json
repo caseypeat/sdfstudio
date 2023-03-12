@@ -130,5 +130,8 @@
     "reportOptionalCall": "none"
   },
   "python.languageServer": "Pylance",
-  "python.defaultInterpreterPath": "/home/yuzh/anaconda3/envs/monosdf/bin/python"
+  "python.defaultInterpreterPath": "/home/yuzh/anaconda3/envs/monosdf/bin/python",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }

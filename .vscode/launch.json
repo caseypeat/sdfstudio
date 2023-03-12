@@ -48,20 +48,32 @@
         "mv-monosdf",
         // "--viewer.no-enable",
         // "--logging.event-writer=wandb",
-        "--vis", "wandb",
-        "--pipeline.datamanager.train-num-images-to-sample-from", "1",
-        "--pipeline.datamanager.camera-optimizer.mode", "off",
-        "--pipeline.model.near-plane", "1.0",
-        "--pipeline.model.far-plane", "6",
-        "--pipeline.model.background-color", "black",
-        "--pipeline.model.sdf-field.inside-outside", "False",
-        "--pipeline.model.mono-depth-loss-mult", "0.0",
-        "--pipeline.model.mono-normal-loss-mult", "0.0",
+        "--vis",
+        "wandb",
+        "--pipeline.datamanager.train-num-images-to-sample-from",
+        "1",
+        "--pipeline.datamanager.camera-optimizer.mode",
+        "off",
+        "--pipeline.model.near-plane",
+        "1.0",
+        "--pipeline.model.far-plane",
+        "6",
+        "--pipeline.model.background-color",
+        "black",
+        "--pipeline.model.sdf-field.inside-outside",
+        "False",
+        "--pipeline.model.mono-depth-loss-mult",
+        "0.0",
+        "--pipeline.model.mono-normal-loss-mult",
+        "0.0",
         "uniscene-data",
-        "--data", "data/DTU/scan24",
+        "--data",
+        "data/DTU/scan24",
         // "--data", "data/DTU/scan114"
-        "--center_crop_type", "center_crop_for_dtu",
-        "--neighbors_num", "10"
+        "--center_crop_type",
+        "center_crop_for_dtu",
+        "--neighbors_num",
+        "10"
       ]
     },
     {
@@ -70,7 +82,9 @@
       "request": "launch",
       "program": "scripts/train.py",
       "console": "integratedTerminal",
-      "args": ["instant_ngp"]
+      "args": [
+        "instant_ngp"
+      ]
     },
     {
       "name": "Python: train ngp nerfstudio",
@@ -117,7 +131,24 @@
       "request": "launch",
       "program": "scripts/train.py",
       "console": "integratedTerminal",
-      "args": ["semantic_nerf"]
-    }
+      "args": [
+        "semantic_nerf"
+      ]
+    },
+    // My Configurations
+    {
+      "name": "Python: Module",
+      "type": "python",
+      "request": "launch",
+      "module": "scripts.train",
+      "justMyCode": true,
+      "args": [
+        "neus-facto",
+        "--pipeline.model.sdf-field.inside-outside=False",
+        "--vis=viewer",
+        "--experiment-name=neus-facto-dtu65=sdfstudio-data",
+        "--data=data/sdfstudio-demo-data/dtu-scan65",
+      ]
+    },
   ]
 }
